@@ -1,0 +1,23 @@
+<header>
+  <nav>
+    <h1><a routerLink="/">My Application</a></h1>
+    <div class="search-container">
+      <input type="text" placeholder="Search..." [(ngModel)]="searchTerm" (input)="onInputChange(searchTerm)" />
+      <button (click)="onSearch(searchTerm)">Search</button>
+      <ul *ngIf="searchResult" class="suggestions-list">
+        <li *ngFor="let product of searchResult">
+          <a (mousedown)="selectProduct(product)"> {{ product.name }}</a>
+        </li>
+      </ul>
+    </div>
+    <ul>
+      <li><a routerLink="orders">Order</a></li>
+      <li *ngIf="!isLoggedIn && currentRoute === '/'"><a routerLink="/seller">Login</a></li>
+      <li *ngIf="isLoggedIn && userType === 'seller'"><a routerLink="/seller-add-product">Add Product</a></li>
+      <li *ngIf="isLoggedIn && userType === 'seller'"><a routerLink="/seller-home">List</a></li>
+      <li *ngIf="!isLoggedIn || userType === 'user'"><a routerLink="/cart">Cart({{ cartItemCount }})</a></li>
+      <li *ngIf="isLoggedIn && userType === 'user'"><a routerLink="/wish-list">Wish List</a></li>
+      <li *ngIf="isLoggedIn"><a routerLink="/profile">{{ userName }}</a></li>
+    </ul>
+  </nav>
+</header>

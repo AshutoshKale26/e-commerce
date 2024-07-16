@@ -1,0 +1,191 @@
+header {
+  background-color: #333;
+  color: white;
+  padding: 10px 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+nav h1 {
+  margin-left: 20px;
+}
+
+nav input[type="text"] {
+  padding: 5px;
+  border: none;
+  border-radius: 4px;
+  flex-grow: 1;
+  max-width: 400px;
+  margin: 0 20px;
+}
+
+nav ul {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  flex-wrap: wrap;
+}
+
+nav ul li {
+  padding-left: 15px;
+  padding: 15px;
+}
+
+nav ul li a {
+  color: white;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+nav ul li a.active {
+  font-weight: bold;
+  color: blue;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.search-form {
+  position: relative;
+}
+
+.search-container {
+  flex: 1;
+  display: flex;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 5px;
+}
+
+.search-container input {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 0.5rem;
+}
+
+.search-container button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: #0056b3;
+}
+
+.suggestions-list {
+  position: absolute;
+  top: 60px;
+  z-index: 10;
+  display: list-item !important;
+  border: 1px solid #5e5e5e;
+  background-color: #333;
+  width: 300px;
+  padding: 0;
+  margin: 0;
+}
+
+.suggestions-list li {
+  padding: 10px;
+  width: 100%;
+  border-bottom: 1px solid #0228ff;
+}
+
+.suggestions-list li:last-child {
+  border-bottom: none;
+}
+
+.suggestions-list li:hover {
+  cursor: pointer;
+  background-color: #555;
+  color: #007bff;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  nav h1 {
+    margin-left: 10px;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  nav ul li {
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  nav input[type="text"] {
+    margin: 10px;
+    width: calc(100% - 40px);
+  }
+
+  .search-container {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+  }
+
+  .search-container input {
+    width: calc(100% - 1rem);
+    margin: 0.5rem 0;
+  }
+
+  .search-container button {
+    width: calc(100% - 1rem);
+  }
+
+  .suggestions-list {
+    width: calc(100% - 20px);
+  }
+}
+
+@media (max-width: 480px) {
+  nav h1 {
+    font-size: 1.2rem;
+    margin-left: 10px;
+  }
+
+  nav ul li {
+    padding: 8px 0;
+  }
+
+  nav input[type="text"] {
+    margin: 5px;
+    width: calc(100% - 10px);
+  }
+
+  .search-container input {
+    width: calc(100% - 0.5rem);
+  }
+
+  .search-container button {
+    width: calc(100% - 0.5rem);
+  }
+
+  .suggestions-list {
+    width: calc(100% - 10px);
+  }
+}
+

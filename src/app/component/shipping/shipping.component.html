@@ -1,0 +1,109 @@
+<!-- <div class="container">
+    <h2>Shipping Details</h2>
+    <form #shippingForm="ngForm" (ngSubmit)="placeOrder()">
+      <div class="form-group">
+        <label for="addressLane">Address Lane:</label>
+        <input type="text" id="addressLane" name="addressLane" [(ngModel)]="addressLane" required class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="road">Road:</label>
+        <input type="text" id="road" name="road" [(ngModel)]="road" required class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" [(ngModel)]="city" required class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="pincode">Pincode:</label>
+        <input type="text" id="pincode" name="pincode" [(ngModel)]="pincode" required class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="contact">Contact Number:</label>
+        <input type="text" id="contact" name="contact" [(ngModel)]="contact" required class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="altContact">Alternate Contact Number:</label>
+        <input type="text" id="altContact" name="altContact" [(ngModel)]="altContact" class="form-control" />
+      </div>
+      <button type="submit" class="btn btn-primary">Order Now</button>
+    </form>
+  </div> -->
+
+  <!-- <div class="container">
+    <h2>Shipping Details</h2>
+    <form #shippingForm="ngForm" (ngSubmit)="placeOrder()" novalidate>
+      <div class="form-group">
+        <label for="addressLane">Address Lane:</label>
+        <input type="text" id="addressLane" name="addressLane" [(ngModel)]="addressLane" required class="form-control" />
+        <div *ngIf="shippingForm.submitted && !shippingForm.controls['addressLane']?.valid" class="text-danger">
+          Address Lane is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="road">Road:</label>
+        <input type="text" id="road" name="road" [(ngModel)]="road" required class="form-control" />
+        <div *ngIf="shippingForm.submitted && !shippingForm.controls['road']?.valid" class="text-danger">
+          Road is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" [(ngModel)]="city" required class="form-control" />
+        <div *ngIf="shippingForm.submitted && !shippingForm.controls['city']?.valid" class="text-danger">
+          City is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="pincode">Pincode:</label>
+        <input type="text" id="pincode" name="pincode" [(ngModel)]="pincode" required class="form-control" />
+        <div *ngIf="shippingForm.submitted && !shippingForm.controls['pincode']?.valid" class="text-danger">
+          Pincode is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="contact">Contact Number:</label>
+        <input type="text" id="contact" name="contact" [(ngModel)]="contact" required class="form-control" />
+        <div *ngIf="shippingForm.submitted && !shippingForm.controls['contact']?.valid" class="text-danger">
+          Contact Number is required.
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="altContact">Alternate Contact Number:</label>
+        <input type="text" id="altContact" name="altContact" [(ngModel)]="altContact" class="form-control" />
+      </div>
+      <button type="submit" class="btn btn-primary">Order Now</button>
+    </form>
+  </div> -->
+
+  
+  <div class="container">
+    <h2>Shipping Details</h2>
+    <form #shippingForm="ngForm" (ngSubmit)="placeOrder()">
+      <div class="form-group">
+        <label for="addressLane">Address Lane:</label>
+        <input type="text" id="addressLane" name="addressLane" [(ngModel)]="shippingInfo.addressLane" required class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="road">Road:</label>
+        <input type="text" id="road" name="road" [(ngModel)]="shippingInfo.road" required class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" [(ngModel)]="shippingInfo.city" required class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="pincode">Pincode:</label>
+        <input type="text" id="pincode" name="pincode" [(ngModel)]="shippingInfo.pincode" required class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="contact">Contact Number:</label>
+        <input type="text" id="contact" name="contact" [(ngModel)]="shippingInfo.contact" required class="form-control" />
+      </div>
+      <div class="form-group">
+        <label for="altContact">Alternate Contact Number:</label>
+        <input type="text" id="altContact" name="altContact" [(ngModel)]="shippingInfo.altContact" class="form-control" />
+      </div>
+      <button type="submit" class="btn btn-primary">Order Now</button>
+    </form>
+  </div>
+  

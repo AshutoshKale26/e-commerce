@@ -1,0 +1,24 @@
+<!-- <h2>Search Results for "{{ query }}"</h2> -->
+<div class="product-details-container" *ngFor="let product of searchResult">
+  
+
+    <div class="product-image">
+      <img src={{product.image}} alt={{product.name}}>
+    </div>
+    
+    <div  class="product-info" (mousedown)="selectProduct(product)">
+      
+      <h2>{{ product.name }}</h2>
+      <a >{{ product.name }}</a>
+      <h4>Price: {{ product.price | currency }}</h4>
+      <h4>Category: {{ product.category }}</h4>
+      <h4>Color: {{ product.color }}</h4>
+      <p>Description: {{ product.description }}</p>
+      
+    </div>
+  
+
+  <ng-template #noResults>
+    <p>No products found.</p>
+  </ng-template>
+</div>

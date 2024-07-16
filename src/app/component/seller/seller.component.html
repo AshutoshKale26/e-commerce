@@ -1,0 +1,51 @@
+<div class="signup-container">
+  <h2 *ngIf="showLogin">Login</h2>
+  <h2 *ngIf="!showLogin">Sign Up</h2>
+
+  <form #form="ngForm" (ngSubmit)="onSubmit(form)">
+
+    <div  class="form-group">
+      <label for="userType"></label>
+      <select id="userType" name="userType" [(ngModel)]="userType" required>
+        <option value="seller">Seller</option>
+        <option value="user">User</option>
+      </select>
+    </div>
+
+    <div *ngIf="!showLogin" class="form-group">
+      <label for="name"></label>
+      <input type="text" id="name" name="name" [(ngModel)]="name" placeholder="Enter Name" required>
+    </div>
+
+    <div class="form-group">
+      <label for="email"></label>
+      <input type="email" id="email" name="email" [(ngModel)]="email" placeholder="Enter Email" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password"></label>
+      <input type="password" id="password" name="password" [(ngModel)]="password" placeholder="Enter Password" required>
+    </div>
+
+    <div *ngIf="!showLogin" class="form-group">
+      <label for="profile"></label>
+      <input type="text" id="profile" name="profile" [(ngModel)]="profile" placeholder="Enter Profile URL " >
+    </div>
+
+    
+
+    <div class="form-group">
+      <button type="submit" class="submit-button">{{ showLogin ? 'Login' : 'Sign Up' }}</button>
+    </div>
+
+    <div class="form-group">
+      <button type="button" (click)="toggleForm()" class="toggle-button">
+        {{ showLogin ? 'Switch to Sign Up' : 'Switch to Login' }}
+      </button>
+    </div>
+
+    <div *ngIf="loginError" class="error">
+      {{ loginError }}
+    </div>
+  </form>
+</div>

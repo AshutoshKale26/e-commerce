@@ -1,0 +1,44 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+<div class="profile-container">
+  <div class="profile-header">
+    <img [src]="userProfilePic" alt="Profile Picture" class="profile-pic">
+    <h2>{{ name }}</h2>
+    <p>{{ email }}</p>
+    <button (click)="editProfile()">Edit Profile</button>
+    <button (click)="logout()">Logout</button>
+  </div>
+
+  <div class="profile-edit" *ngIf="isEditing">
+    <h3>Edit Profile</h3>
+    <form (ngSubmit)="saveProfile()">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" [(ngModel)]="name" name="name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" [(ngModel)]="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <div class="password-wrapper">
+          <input [type]="showPassword ? 'text' : 'password'" id="password" [(ngModel)]="password" name="password" required>
+          <button type="button" class="toggle-password" (click)="togglePasswordVisibility()">
+            <i class="fa" [ngClass]="{'fa-eye': !showPassword, 'fa-eye-slash': showPassword}"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="profilePic">Profile Picture URL:</label>
+        <input type="text" id="profilePic" [(ngModel)]="userProfilePic" name="profilePic" required>
+      </div>
+
+      <button type="submit">Save</button>
+      <button type="button" (click)="cancelEdit()">Cancel</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,369 @@
+{
+  "seller": [
+    {
+      "id": "id-240055430-lxucw8fd",
+      "name": "Ashutosh Kale ",
+      "email": "aashutoshkale414@gmail.com",
+      "password": "1",
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaLn_m3nqFcS7dxt6QSEHP3qFR-Dc_6059nA&s",
+      "userType": "user"
+    },
+    {
+      "id": "id-v83ku",
+      "name": "Ashutosh",
+      "email": "aashutoshkale414@gmail.com",
+      "password": "aashutoshkale414@gmail.com",
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTfS4SSVVbgAFSM_eNpUCG2H3JIGaF6I-1nZA&s",
+      "userType": "seller"
+    },
+    {
+      "id": "id-lcbef",
+      "name": "ak",
+      "email": "Abhi123@gmail.com",
+      "password": "Abhi123@gmail.com",
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ_z5dQg-VRpwdlgZ48lsaa5uELPe_R28g_w&s",
+      "userType": "seller"
+    },
+    {
+      "id": "id-akkk9",
+      "name": "Abhi",
+      "email": "ak@gmail.com",
+      "password": "ak@gmail.com",
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ_z5dQg-VRpwdlgZ48lsaa5uELPe_R28g_w&s",
+      "userType": "user"
+    }
+  ],
+  "product": [
+    {
+      "id": "9",
+      "name": "Ninja Blender",
+      "price": "99",
+      "color": "Black",
+      "category": "Home Appliances",
+      "description": "High-power blender for smoothies and more",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBjts5ktSyt6V3Ubvjfbr78bzk-DgrEgoecg&s",
+      "type": "special",
+      "sellerId": "id-v83ku"
+    },
+    {
+      "id": "id-mug413cq3lxvxp05j",
+      "name": "Samsang Phone",
+      "price": "15000",
+      "color": " White",
+      "category": " phone",
+      "description": "Best Smartphones Under ₹15,000",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ6CAt9o9uHuruz4is67guVXv1Uh4hl9P-j-g&s",
+      "sellerId": "id-lcbef"
+    },
+    {
+      "id": "1",
+      "name": "Samsang Galaxy S21",
+      "price": "799",
+      "color": "Phantom Gray",
+      "category": "Electronics",
+      "description": "Latest Samsung smartphone with advanced features",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBZ5vaqXIM03tVYzyTflEst9jwSWByZIgdzA&s",
+      "type": "special",
+      "sellerId": "id-v83ku"
+    },
+    {
+      "id": "2",
+      "name": "Sony WH-1000XM4",
+      "price": "349",
+      "color": "Black",
+      "category": "Electronics",
+      "description": "Industry-leading noise canceling headphones",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp1ftJuGWpC9W33yD5rkeEHXDoYXBsmuzZdg&s",
+      "type": "special",
+      "sellerId": "id-lcbef"
+    },
+    {
+      "id": "3",
+      "name": "Apple MacBook Air",
+      "price": "999",
+      "color": "Space Gray",
+      "category": "Electronics",
+      "description": "Lightweight laptop with M1 chip",
+      "image": "https://bl-i.thgim.com/public/incoming/fk5hrs/article67097604.ece/alternates/FREE_1200/MacBookAir%2015inch_5.JPG",
+      "type": "special",
+      "sellerId": "id-v83ku"
+    },
+    {
+      "id": "4",
+      "name": "Black Forest",
+      "price": "10",
+      "color": "Blue",
+      "category": "Books",
+      "description": "Classic novel by F. Scott Fitzgerald",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSU9kGQ1afuHTvuAbneHi7LVfwa0x7Bhpxwzw&s",
+      "type": "special",
+      "sellerId": "id-lcbef"
+    },
+    {
+      "id": "5",
+      "name": "To Kill a Mockingbird",
+      "price": "10",
+      "color": "Green",
+      "category": "Books",
+      "description": "Harper Lee's timeless classic",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSn5xkKB1ByJI59VpGEBBkkFRN0_FJ9COkr2g&s",
+      "type": "special",
+      "sellerId": "id-v83ku"
+    },
+    {
+      "id": "6",
+      "name": "1984",
+      "price": "15",
+      "color": "Red",
+      "category": "Books",
+      "description": "Dystopian novel by George Orwell",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDeh-Rh6Xmg9cN2g8p8Sdl4m8KDlu1hTpjmg&s",
+      "type": "special",
+      "sellerId": "id-lcbef"
+    },
+    {
+      "id": "7",
+      "name": "Dyson V11 Vacuum",
+      "price": "599",
+      "color": "Purple",
+      "category": "Home Appliances",
+      "description": "High-efficiency cordless vacuum cleaner",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROLAyElfGpxj9iYAJm8nygOnSDtRLeFAQpTg&s",
+      "type": "special",
+      "sellerId": "id-v83ku"
+    },
+    {
+      "id": "8",
+      "name": "Instant Pot Duo",
+      "price": "89",
+      "color": "Silver",
+      "category": "Home Appliances",
+      "description": "7-in-1 Electric Pressure Cooker",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTkSjmlu5TgHIJN2NbNicHV-FILkoPAq03AOw&s",
+      "type": "special",
+      "sellerId": "id-lcbef"
+    },
+    {
+      "id": "10",
+      "name": "Kenmore Elite Refrigerator",
+      "price": "1299",
+      "color": "Stainless Steel",
+      "category": "Home Appliances",
+      "description": "Large capacity French door refrigerator",
+      "image": "https://images.webfronts.com/cache/guhnrdlluf.png?imgeng=/w_500/h_500/m_letterbox_ffffff_100",
+      "type": "special",
+      "sellerId": "id-lcbef"
+    },
+    {
+      "id": "11",
+      "name": "Nike Air Max 270",
+      "price": "150",
+      "color": "White",
+      "category": "Fashion",
+      "description": "Comfortable and stylish sneakers",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNqDLdYLuC7SOCIIy01g5yOsK0Grq4RrvC-A&s",
+      "type": "special",
+      "sellerId": "id-v83ku"
+    },
+    {
+      "id": "12",
+      "name": "Adidas Ultraboost",
+      "price": "180",
+      "color": "Black",
+      "category": "Fashion",
+      "description": "High-performance running shoes",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFLJZ1CBnhCycRniCyF8KUVGEF6t7dZ-UdLQ&s",
+      "type": "special",
+      "sellerId": "id-lcbef"
+    },
+    {
+      "id": "4erf",
+      "name": "The Great Gatsby",
+      "price": "10",
+      "color": "Blue",
+      "category": "Books",
+      "description": "Classic novel by F. Scott Fitzgerald",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSKi5lknrw7SIwZ01RQRqyvtXz2bFxrUsGVpA&s",
+      "type": "special",
+      "sellerId": "id-lcbef"
+    },
+    {
+      "id": "3ewf",
+      "name": "Samsang Phone F21",
+      "price": "12000",
+      "color": "Blue,White,Black",
+      "category": "man",
+      "description": "Comfortable jeans for casual outings.",
+      "image": "https://images.samsung.com/is/image/samsung/assets/in/smartphones/mobiles-by-price/Smartphones-under-15000-Mob2.jpg?$720_N_JPG$",
+      "sellerId": "id-lcbef"
+    },
+    {
+      "id": "d721",
+      "name": "Jeans",
+      "price": "49.99",
+      "color": "Blue,White,Black",
+      "category": "Clothing",
+      "description": "Comfortable jeans for casual outings.",
+      "image": "https://cdn.aarp.net/content/dam/aarp/entertainment/beauty-and-style/2021/04/1140-jeans-promo.jpg",
+      "sellerId": "id-v83ku"
+    },
+    {
+      "id": "d731",
+      "name": "Running Shoes",
+      "price": "89.99",
+      "color": "Black",
+      "category": "Footwear",
+      "description": "High-performance running shoes .",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGwmV__Yna-S9ireaJeorPZ6R5S22b6aA38Q&s",
+      "sellerId": "id-v83ku"
+    }
+  ],
+  "categories": [
+    {
+      "name": "Electronics",
+      "image": "https://ecelectronics.com/wp-content/uploads/2020/04/Modern-Electronics-EC-.jpg",
+      "id": "4a09"
+    },
+    {
+      "image": "https://t3.ftcdn.net/jpg/02/10/85/26/360_F_210852662_KWN4O1tjxIQt8axc2r82afdSwRSLVy7g.jpg",
+      "name": "Fashion",
+      "id": "b1fe"
+    },
+    {
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2AO73UNaJW8qKmPML1NqUvFe877Xbcuo2YA&s",
+      "name": "Home Appliances",
+      "id": "aebb"
+    },
+    {
+      "image": "https://cdn.pixabay.com/photo/2015/11/19/21/10/glasses-1052010_640.jpg",
+      "name": "Books",
+      "id": "6a48"
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "sellerId": "id-lcbef",
+      "userId": "id-240055430-lxucw8fd",
+      "product": {
+        "id": "2",
+        "name": "Sony WH-1000XM4",
+        "price": "349",
+        "color": "Black",
+        "category": "Electronics",
+        "description": "Industry-leading noise canceling headphones",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp1ftJuGWpC9W33yD5rkeEHXDoYXBsmuzZdg&s",
+        "type": "special",
+        "sellerId": "id-lcbef"
+      },
+      "quantity": 2,
+      "shippingInfo": {
+        "addressLane": "Lajpatraywadi , Eklahre , Ahmadnagar",
+        "city": "Shrirampur",
+        "pincode": "413720",
+        "contact": "08087478894",
+        "road": "k"
+      },
+      "createdAt": "2024-07-12T16:26:13.392Z"
+    },
+    {
+      "id": 2,
+      "sellerId": "id-lcbef",
+      "userId": "id-240055430-lxucw8fd",
+      "product": {
+        "id": "3ewf",
+        "name": "Samsang Phone F21",
+        "price": "12000",
+        "color": "Blue,White,Black",
+        "category": "man",
+        "description": "Comfortable jeans for casual outings.",
+        "image": "https://images.samsung.com/is/image/samsung/assets/in/smartphones/mobiles-by-price/Smartphones-under-15000-Mob2.jpg?$720_N_JPG$",
+        "sellerId": "id-lcbef"
+      },
+      "quantity": 3,
+      "shippingInfo": {
+        "addressLane": "Lajpatraywadi , Eklahre , Ahmadnagar",
+        "city": "Shrirampur",
+        "pincode": "413720",
+        "contact": "08087478894",
+        "road": "k"
+      },
+      "createdAt": "2024-07-12T16:26:13.396Z"
+    },
+    {
+      "id": 3,
+      "sellerId": "id-v83ku",
+      "userId": "",
+      "product": {
+        "id": "9",
+        "name": "Ninja Blender",
+        "price": "99",
+        "color": "Black",
+        "category": "Home Appliances",
+        "description": "High-power blender for smoothies and more",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBjts5ktSyt6V3Ubvjfbr78bzk-DgrEgoecg&s",
+        "type": "special",
+        "sellerId": "id-v83ku"
+      },
+      "quantity": 3,
+      "shippingInfo": {
+        "pincode": "413720",
+        "addressLane": "Lajpatraywadi , Eklahre , Ahmadnagar",
+        "city": "Shrirampur",
+        "contact": "08087478894",
+        "road": "k"
+      },
+      "createdAt": "2024-07-12T16:33:17.835Z"
+    },
+    {
+      "id": 4,
+      "sellerId": "id-v83ku",
+      "userId": "id-240055430-lxucw8fd",
+      "product": {
+        "id": "3",
+        "name": "Apple MacBook Air",
+        "price": "999",
+        "color": "Space Gray",
+        "category": "Electronics",
+        "description": "Lightweight laptop with M1 chip",
+        "image": "https://bl-i.thgim.com/public/incoming/fk5hrs/article67097604.ece/alternates/FREE_1200/MacBookAir%2015inch_5.JPG",
+        "type": "special",
+        "sellerId": "id-v83ku"
+      },
+      "quantity": 4,
+      "shippingInfo": {
+        "pincode": "413720",
+        "addressLane": "Lajpatraywadi , Eklahre , Ahmadnagar",
+        "city": "Shrirampur",
+        "contact": "08087478894",
+        "road": "k"
+      },
+      "createdAt": "2024-07-14T17:17:49.475Z"
+    },
+    {
+      "id": 5,
+      "sellerId": "id-lcbef",
+      "userId": "id-240055430-lxucw8fd",
+      "product": {
+        "id": "2",
+        "name": "Sony WH-1000XM4",
+        "price": "349",
+        "color": "Black",
+        "category": "Electronics",
+        "description": "Industry-leading noise canceling headphones",
+        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTp1ftJuGWpC9W33yD5rkeEHXDoYXBsmuzZdg&s",
+        "type": "special",
+        "sellerId": "id-lcbef"
+      },
+      "quantity": 2,
+      "shippingInfo": {
+        "pincode": "413720",
+        "addressLane": "Lajpatraywadi , Eklahre , Ahmadnagar",
+        "city": "Shrirampur",
+        "contact": "08087478894",
+        "road": "k"
+      },
+      "createdAt": "2024-07-14T17:17:49.477Z"
+    }
+  ]
+}

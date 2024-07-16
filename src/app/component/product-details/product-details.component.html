@@ -1,0 +1,118 @@
+<!-- <div class="product-details-container">
+    <div class="product-image">
+      <img [src]="product.image" alt="{{ product.name }}">
+    </div>
+    <div class="product-info">
+      <h2>{{ product.name }}</h2>
+      <h4>Price: {{ product.price }}</h4>
+      <h4>Category: {{ product.category}}</h4>
+      <h4>Color: {{ product.color}}</h4>
+      <p>Description: {{ product.description }}</p>
+      <div class="quantity-group">
+        <button (click)="handleQuantity('min')" >-</button>
+        <input type="text" value="{{productQuantity}}" />
+        <button (click)="handleQuantity('plus')">+</button>
+
+    </div>
+      <div class="buttons">
+        <button class="btn btn-success" (click)="addToCart(product)">Add to Cart</button>
+        <button class="btn btn-primary" (click)="buyProduct(product)">Buy</button>
+      </div>
+
+      
+    </div>
+</div> -->
+
+<!-- <div class="product-details-container" *ngIf="product">
+  <div class="product-image">
+    <img [src]="product.image" alt="{{ product.name }}">
+  </div>
+  <div class="product-info">
+    <h2>{{ product.name }}</h2>
+    <h4>Price: {{ product.price | currency }}</h4>
+    <h4>Category: {{ product.category }}</h4>
+    <h4>Color: {{ product.color }}</h4>
+    <p>Description: {{ product.description }}</p>
+
+    <div class="quantity-group">
+      <button (click)="handleQuantity('min')" >-</button>
+      <input type="text" value="{{productQuantity}}" />
+      <button (click)="handleQuantity('plus')">+</button>
+
+  </div>
+    <div class="buttons">
+      <button class="btn btn-success" (click)="removeFromCart(product)" *ngIf="isInCart">Remove from Cart</button>
+      <button class="btn btn-success" (click)="addToCart(product)" *ngIf="!isInCart">Add to Cart</button>
+      <button class="btn btn-primary" (click)="proceedToShipping()">Buy</button>
+    </div>
+  </div>
+</div> -->
+
+<!-- <div class="container">
+  <div *ngIf="product">
+    <div class="product-details">
+      <h2>{{ product.name }}</h2>
+      <img [src]="product.image" alt="{{ product.name }}">
+      <p>{{ product.description }}</p>
+      <p>Price: {{ product.price | currency }}</p>
+      <div class="quantity-group">
+        <button (click)="handleQuantity('min')">-</button>
+        <input type="text" value="{{ productQuantity }}" readonly />
+        <button (click)="handleQuantity('plus')">+</button>
+      </div>
+      <div *ngIf="isInCart; else addToCartButton">
+        <button (click)="removeFromCart(product)">Remove from Cart</button>
+      </div>
+      <ng-template #addToCartButton>
+        <button (click)="addToCart(product)">Add to Cart</button>
+      </ng-template>
+      <button (click)="addToWishList(product)">Add to Wish List</button>
+    </div>
+    <hr>
+    <h3>Shipping Information</h3>
+    <form #orderForm="ngForm" (ngSubmit)="placeOrder(orderForm)">
+      <div>
+        <label for="address">Address Lane:</label>
+        <input type="text" id="address" name="address" ngModel required>
+      </div>
+      <div>
+        <label for="city">City:</label>
+        <input type="text" id="city" name="city" ngModel required>
+      </div>
+      <div>
+        <label for="pincode">Pincode:</label>
+        <input type="text" id="pincode" name="pincode" ngModel required>
+      </div>
+      <div>
+        <label for="contactNumber">Contact Number:</label>
+        <input type="text" id="contactNumber" name="contactNumber" ngModel required>
+      </div>
+      <button type="submit">Order Now</button>
+    </form>
+  </div>
+</div> -->
+
+<div class="product-details-container" >
+  <div class="product-image">
+    <img [src]="product?.image" alt="{{ product?.name }}">
+  </div>
+  <div class="product-info">
+    <h2>{{ product?.name }}</h2>
+    <p>Description -:{{ product?.description }}</p>
+    <p>Category -:{{ product?.category }}</p>
+    <p>Color -: {{ product?.color }}</p>
+    <p>Price -: {{ product?.price | currency }}</p>
+    <div class="quantity-group">
+      <button (click)="handleQuantity('min')">-</button>
+      <input type="text" [value]="productQuantity" readonly>
+      <button (click)="handleQuantity('plus')">+</button>
+    </div>
+    <button (click)="addToCart(product)" [disabled]="isInCart" class="btn btn-primary">Add to Cart</button>
+    <button (click)="addToWishList(product)" class="btn btn-secondary">Add to Wishlist</button>
+    <button (click)="buyProduct(product)" class="btn btn-success">Buy Now</button>
+  </div>
+</div>
+
+
+
+

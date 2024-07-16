@@ -1,0 +1,18 @@
+<div class="container">
+    <h2>Your Wish List</h2>
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-4" *ngFor="let product of wishList">
+        <div class="card h-100">
+          <a [routerLink]="['/product-details', product.id]"><img class="card-img-top" [src]="product.image" alt="{{ product.name }}" style="height: 150px; object-fit: cover;"></a>
+          <div class="card-body">
+            <h4 class="card-title">
+              <a [routerLink]="['/product-details', product.id]">{{ product.name }}</a>
+            </h4>
+            <h5>{{ product.price | currency }}</h5>
+            <button class="btn btn-danger" (click)="removeFromWishList(product.id)">Remove</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

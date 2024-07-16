@@ -1,0 +1,49 @@
+<div class="signup-container">
+  <h2>{{ id ? 'Edit Product' : 'Add Product' }} Form</h2>
+
+  <form #addProductForm="ngForm" (ngSubmit)="onSubmit(addProductForm)">
+
+    <div  class="form-group">
+      <label for="category"></label>
+      <select id="category" name="category" placeholder="Enter Product Category" [(ngModel)]="category" required>
+        <option value="electronics">Electronics</option>
+        <option value="fashion">Fashion</option>
+        <option value="books">Books</option>
+        <option value="home-appliances">Home Appliances</option>
+      </select>
+      <div *ngIf="addProductForm.submitted && !category" class="error">Category is required</div>
+    </div>
+    
+    <div class="form-group">
+      <label for="name"></label>
+      <input type="text" id="name" name="name" placeholder="Enter Product Name" [(ngModel)]="name" required>
+      <div *ngIf="addProductForm.submitted && !name" class="error">Name is required</div>
+    </div>
+
+    <div class="form-group">
+      <label for="price"></label>
+      <input type="text" id="price" name="price" placeholder="Enter Product Price" [(ngModel)]="price" required>
+      <div *ngIf="addProductForm.submitted && !price" class="error">Price is required</div>
+    </div>
+
+    <div class="form-group">
+      <label for="color"></label>
+      <input type="text" id="color" name="color" placeholder="Enter Product Color" [(ngModel)]="color" required>
+      <div *ngIf="addProductForm.submitted && !color" class="error">Color is required</div>
+    </div>
+
+    
+
+    <div class="form-group">
+      <label for="description"></label>
+      <input type="text" id="description" name="description" placeholder="Enter Product Description" [(ngModel)]="description">
+    </div>
+
+    <div class="form-group">
+      <label for="image"></label>
+      <input type="text" id="image" name="image" placeholder="Enter Product Image" [(ngModel)]="image">
+    </div>
+
+    <button type="submit" class="submit-button">{{ id ? 'Save Changes' : 'Add Product' }}</button>
+  </form>
+</div>

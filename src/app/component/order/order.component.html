@@ -1,0 +1,94 @@
+<div class="container" *ngIf="userType==='user' ">
+    <h2>Orders</h2>
+    <div *ngFor="let order of orders" class="order-card">
+      <div class="row">
+        <div class="col-md-4">
+          <img class="img" [routerLink]="['/product-details', order.product.id]" [src]="order.product.image" alt="{{ order.product.name }}">
+        </div>
+        <div class="col-md-8">
+          <h4>Order ID: {{ order.id }}</h4>
+          <p>Product: {{ order.product.name }}</p>
+          <p>Price: {{ order.product.price | currency }}</p>
+          <p>Quantity: {{ order.quantity }}</p>
+          <p>Total: {{ order.product.price * order.quantity | currency }}</p>
+          <button (click)="toggleDetails(order)" class="btn btn-info">Read More</button>
+          <button (click)="deleteOrder(order.id)" class="btn btn-danger">Delete</button>
+          <button (click)="editOrder(order)" class="btn btn-secondary">Edit Shipping</button>
+          <div *ngIf="order.showDetails">
+            <p>Address Lane: {{ order.shippingInfo.addressLane }}</p>
+            <p>Road: {{ order.shippingInfo.road }}</p>
+            <p>City: {{ order.shippingInfo.city }}</p>
+            <p>Pincode: {{ order.shippingInfo.pincode }}</p>
+            <p>Contact: {{ order.shippingInfo.contact }}</p>
+            <p>Alternate Contact: {{ order.shippingInfo.altContact }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="editingOrder" class="modal">
+      <div class="modal-content">
+        <h2>Edit Shipping Details</h2>
+        <form (ngSubmit)="saveOrder()">
+          <div class="form-group">
+            <label for="editAddressLane">Address Lane:</label>
+            <input type="text" id="editAddressLane" [(ngModel)]="editingOrder.shippingInfo.addressLane" name="editAddressLane" placeholder="Enter Address Lane" required class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="editRoad">Road:</label>
+            <input type="text" id="editRoad" [(ngModel)]="editingOrder.shippingInfo.road" name="editRoad" placeholder="Enter Road" required class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="editCity">City:</label>
+            <input type="text" id="editCity" [(ngModel)]="editingOrder.shippingInfo.city" name="editCity" placeholder="Enter City" required class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="editPincode">Pincode:</label>
+            <input type="text" id="editPincode" [(ngModel)]="editingOrder.shippingInfo.pincode" name="editPincode" placeholder="Enter Pincode" required class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="editContact">Contact Number:</label>
+            <input type="text" id="editContact" [(ngModel)]="editingOrder.shippingInfo.contact" name="editContact" placeholder="Enter Contact Number" required class="form-control" />
+          </div>
+          <div class="form-group">
+            <label for="editAltContact">Alternate Contact Number:</label>
+            <input type="text" id="editAltContact" [(ngModel)]="editingOrder.shippingInfo.altContact" name="editAltContact" placeholder="Enter Alternate Contact Number" class="form-control" />
+          </div>
+          <button type="submit" class="btn btn-primary">Save</button>
+          <button type="button" (click)="cancelEdit()" class="btn btn-secondary">Cancel</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" *ngIf="userType === 'seller'">
+    <h2>Orders</h2>
+    <div *ngFor="let order of orders" class="order-card">
+      <div class="row">
+        <div class="col-md-4">
+          <img class="img" [routerLink]="['/product-details', order.product.id]" [src]="order.product.image" alt="{{ order.product.name }}">
+        </div>
+        <div class="col-md-8">
+          <h4>Order ID: {{ order.id }}</h4>
+          <p>Product: {{ order.product.name }}</p>
+          <p>Price: {{ order.product.price | currency }}</p>
+          <p>Quantity: {{ order.quantity }}</p>
+          <p>Total: {{ order.product.price * order.quantity | currency }}</p>
+          <button (click)="toggleDetails(order)" class="btn btn-info">Read More</button>
+          <!-- <button (click)="deleteOrder(order.id)" class="btn btn-danger">Delete</button>
+          <button (click)="editOrder(order)" class="btn btn-secondary">Edit Shipping</button> -->
+          <div *ngIf="order.showDetails">
+            <p>Address Lane: {{ order.shippingInfo.addressLane }}</p>
+            <p>Road: {{ order.shippingInfo.road }}</p>
+            <p>City: {{ order.shippingInfo.city }}</p>
+            <p>Pincode: {{ order.shippingInfo.pincode }}</p>
+            <p>Contact: {{ order.shippingInfo.contact }}</p>
+            <p>Alternate Contact: {{ order.shippingInfo.altContact }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  
