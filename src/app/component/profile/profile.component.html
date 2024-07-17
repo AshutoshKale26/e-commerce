@@ -32,9 +32,14 @@
         </div>
       </div>
 
-      <div class="form-group">
+      <div class="form-group" style="display:none;">
         <label for="profilePic">Profile Picture URL:</label>
         <input type="text" id="profilePic" [(ngModel)]="userProfilePic" name="profilePic" required>
+      </div>
+
+      <div class="form-group">
+        <label for="profilePicUpload">Upload Profile Picture:</label>
+        <input type="file" id="profilePicUpload" (change)="onFileSelected($event)">
       </div>
 
       <button type="submit">Save</button>

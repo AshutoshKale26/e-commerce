@@ -27,11 +27,15 @@
       <input type="password" id="password" name="password" [(ngModel)]="password" placeholder="Enter Password" required>
     </div>
 
-    <div *ngIf="!showLogin" class="form-group">
+    <div *ngIf="!showLogin" class="form-group" style="display: none;">
       <label for="profile"></label>
-      <input type="text" id="profile" name="profile" [(ngModel)]="profile" placeholder="Enter Profile URL " >
+      <input type="text" id="profile" name="profile" [(ngModel)]="userProfilePic" placeholder="Enter Profile URL " >
     </div>
 
+    <div class="form-group">
+      <label for="profilePicUpload">Upload Profile Picture:</label>
+      <input type="file" id="profilePicUpload" (change)="onFileSelected($event)">
+    </div>
     
 
     <div class="form-group">

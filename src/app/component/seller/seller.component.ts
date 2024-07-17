@@ -12,11 +12,22 @@ import { AuthService } from '../../services/auth.service';
   styleUrls: ['./seller.component.css']
 })
 export class SellerComponent {
+
+onFileSelected(event: any) {
+  if (event.target.files && event.target.files[0]) {
+    const file = event.target.files[0];
+    const reader = new FileReader();
+    reader.onload = (e: any) => {
+      this.userProfilePic = e.target.result;
+    };
+    reader.readAsDataURL(file);
+  }
+}
   id: string = '';
   name: string = '';
   email: string = '';
   password: string = '';
-  profile: string = '';
+  userProfilePic: string = '';
   userType: string = 'user'; // Default to 'user'
 
   showLogin: boolean = false;
@@ -79,19 +90,19 @@ export class SellerComponent {
           name: this.name,
           email: this.email,
           password: this.password,
-          profile: this.profile,
+          profile: this.userProfilePic,
           userType: this.userType
         };
 
         this.sellerService.sellerSignup(signupData).subscribe(response => {
           console.log('Signup successful', response);
-          form.resetForm();
 
           localStorage.setItem(this.userType === 'seller' ? 'sellerData' : 'userData', JSON.stringify(signupData));
           localStorage.setItem('isLoggedIn', 'true');
 
           this.authService.login(this.userType, this.name);
           this.router.navigate([this.userType === 'seller' ? '/seller-home' : '/']);
+          form.resetForm();
         });
       }
     }

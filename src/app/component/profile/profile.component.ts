@@ -102,4 +102,16 @@ export class ProfileComponent implements OnInit {
   togglePasswordVisibility() {
     this.showPassword = !this.showPassword;
   }
+
+  onFileSelected(event: any) {
+    if (event.target.files && event.target.files[0]) {
+      const file = event.target.files[0];
+      const reader = new FileReader();
+      reader.onload = (e: any) => {
+        this.userProfilePic = e.target.result;
+      };
+      reader.readAsDataURL(file);
+    }
+  }
+
 }
