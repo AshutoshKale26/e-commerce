@@ -6,7 +6,7 @@
       </ol>
       <div class="carousel-inner">
         <div *ngFor="let product of popularProducts; let i = index" class="carousel-item" [class.active]="i === 0">
-          <img [routerLink]="['/product-details', product.id]" class="d-block w-100"  [src]="product.image" alt="{{ product.name }}">
+          <a [routerLink]="['/product-details', product.id]" ><img class="d-block w-100"  [src]="product.image" alt="{{ product.name }}" ></a>
           <div class="carousel-caption d-none d-md-block">
           </div>
         </div>
